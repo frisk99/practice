@@ -13,5 +13,5 @@ class Solution:
                 a, b = dp[max(i - 4, 0)][j], dp[max(i - 3, 0)][max(j - 1, 0)]
                 c, d = dp[max(i - 2, 0)][max(j - 2, 0)], dp[max(i - 1, 0)][max(j - 3, 0)]
                 dp[i][j] = 0.25 * (a + b + c + d)
-        return dp [n][n]
+        return dp[n][n]
 
