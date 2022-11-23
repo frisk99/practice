@@ -1,4 +1,4 @@
-class Solution {
+class Solution1 {
     public int maxRepeating(String sequence, String word) {
         int len_w= word.length();
         int len_s =  sequence.length();
@@ -21,4 +21,11 @@ class Solution {
         }
         return res;
     }
+
+}
+class substr_num{
+public static void main(String[] args) {
+	int a = 3/0;
+	System.out.println(a);
+}
 }
