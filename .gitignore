@@ -4,3 +4,4 @@
 *.xml
 /.metadata/
 *.exe
+/**/*.exe
