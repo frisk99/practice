@@ -1,6 +1,5 @@
 #include<iostream>
 #include<vector>
-#include <functional>
 using namespace std;
 typedef long long ll;
 long long maximumScoreAfterOperations(vector<vector<int>>& edges, vector<int>& values) {
@@ -23,7 +22,7 @@ long long maximumScoreAfterOperations(vector<vector<int>>& edges, vector<int>& v
             }
             if(f==1) dp[u][f] =  res;
             else{
-                if(cnt==0) res =0;  //叶子节点如果f0那么一定不能拿了
+                if(cnt==0) res =0;  //????????f0??????????????
                 ll res1= 0;
                 for(auto v : g[u]){
                     if(v!=p)
@@ -42,3 +41,4 @@ int main(){
 	return 0;
 
 }
+
