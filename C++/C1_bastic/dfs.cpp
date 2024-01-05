@@ -1,10 +1,12 @@
 #include<iostream>
 #include<vector>
 #include <functional>
+#include<set>
 using namespace std;
 typedef long long ll;
 long long maximumScoreAfterOperations(vector<vector<int>>& edges, vector<int>& values) {
         int n  = values.size();
+        multiset<int ,less<int>  >myset;
         vector<vector<int>> g(n);
         for(auto &edge : edges){
             g[edge[0]].push_back(edge[1]);
@@ -23,7 +25,7 @@ long long maximumScoreAfterOperations(vector<vector<int>>& edges, vector<int>& v
             }
             if(f==1) dp[u][f] =  res;
             else{
-                if(cnt==0) res =0;  //叶子节点如果f0那么一定不能拿了
+                if(cnt==0) res =0;  //叶锟接节碉拷锟斤拷锟絝0锟斤拷么一锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷
                 ll res1= 0;
                 for(auto v : g[u]){
                     if(v!=p)
@@ -35,10 +37,9 @@ long long maximumScoreAfterOperations(vector<vector<int>>& edges, vector<int>& v
         };
         dfs(0,-1,0);
         return dp[0][0];
-        
-
     }
 int main(){
+    cout<< "hello"<<endl;
 	return 0;
 
 }
